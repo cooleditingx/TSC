@@ -1,0 +1,95 @@
+.bestsellers {
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: visible;
+    scroll-snap-type: inline mandatory;
+    /* scroll-padding-left: 3.5rem; */
+    /* margin-left: 3.5rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.bestsellerssection {
+    /* height: 100vh; */
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--secondary-color);
+    padding: 0 3.5rem;
+}
+.header {
+    text-align: center;
+    overflow: hidden;
+    font-family: tsc;
+    font-size: 3rem;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+    color: var(--accent-color);
+}
+.bestsellerscards {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 3.5rem;
+    /* margin: 3.5rem; */
+    /* padding-right: 3.5rem; */
+    /* padding-bottom: 0%; */
+    /* height: 55rem; */
+    box-sizing: content-box;
+    overflow: clip;
+}
+.snapsalign > * {
+    scroll-snap-align: start;
+}
+.controlscon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.controlscon button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+    .bestsellerssection {
+        padding: 0 1rem;
+    }
+    .header {
+        font-size: 2rem;
+    }
+    .bestsellerscards {
+        gap: 1.5rem;
+    }
+    .controlscon {
+        padding: 0.5rem;
+    }
+    .controlscon button svg {
+        width: 36px;
+        height: 36px;
+    }
+}

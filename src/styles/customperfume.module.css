@@ -1,0 +1,275 @@
+.section {
+  background: var(--secondary-color);
+  /* border-radius: 16px; */
+  padding: 0.5rem;
+  box-shadow: 0 24px 60px -28px rgba(40, 38, 30, 0.45);
+  text-align: center;
+  /* height: 100vh; */
+}
+
+.buildLabel {
+  font-size: 1rem;
+  /* letter-spacing: 0.28em; */
+  text-transform: uppercase;
+  color: var(--bg-color);
+  font-weight: 600;
+}
+
+.heading {
+  font-size: 3rem;
+  /* font-weight: 600; */
+  line-height: 1.5;
+  /* margin-top: 12px; */
+  /* letter-spacing: -0.01em; */
+  margin: 0;
+  padding: 0;
+  font-family: tsc;
+  color: var(--accent-color);
+}
+
+.subheading {
+  font-size: 1.2rem;
+  color: var(--neutral-color);
+  font-style: italic;
+  /* margin-top: 8px; */
+  padding: 0;
+}
+
+.bottleWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.cap {
+  width: 121px;
+  height: 125px;
+  border-radius: 24px;
+  border: 2.5px solid #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #000000;
+  z-index: 4;
+}
+
+.capCircle {
+  width: 46px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1.5px solid #ceb04e;
+  background-color: #ceb04e;
+  align-self: flex-start;
+  margin: 15px;
+}
+
+.neck {
+  width: 79px;
+  height: 38px;
+  border-left: 2.5px solid #1a1a1a;
+  border-right: 2.5px solid #1a1a1a;
+  background: #ede5db;
+  margin: -2px 0 -1px;
+  position: absolute;
+  z-index: 2;
+  left: 142px;
+  top: 69px;
+}
+
+.bottleBody {
+  position: relative;
+  width: 360px;
+  height: 380px;
+}
+
+.bottleSvg {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.labelsContainer {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.labelSection:hover .labelTitle {
+  opacity: 0.7;
+}
+
+.labelNumber {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: #6f7a63;
+}
+
+.labelNumberGold {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: #9a8636;
+}
+
+.labelTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.labelSubtitle {
+  font-size: 14px;
+  color: #5d6b51;
+  font-style: italic;
+  height: 1rem;
+}
+
+.labelSubtitleGold {
+  font-size: 14px;
+  color: #8a7733;
+  font-style: italic;
+  height: 1rem;
+}
+
+.buttonContainer {
+  margin: 1rem;
+}
+
+.button {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #f4f1e9;
+  font-size: 15px;
+  font-family: inherit;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 16px 44px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #ceb04e;
+  color: #1a1a1a;
+}
+
+.button:disabled {
+  background: #9a9a9a;
+  color: #f4f1e9;
+  cursor: not-allowed;
+}
+
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.popup {
+  background: #ede5db;
+  border-radius: 16px;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 300px;
+  box-shadow: 0 24px 60px -12px rgba(40, 38, 30, 0.45);
+}
+
+.popupTitle {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.popupSelect {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1.5px solid #1a1a1a;
+  background: #f4f1e9;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1a1a1a;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.popupConfirm {
+  background: #1a1a1a;
+  color: #f4f1e9;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.popupConfirm:hover {
+  background: #ceb04e;
+  color: #1a1a1a;
+}
+
+@media (max-width: 1024px) {
+    .bottleWrapper {
+        transform: scale(0.9);
+        transform-origin: top center;
+        margin-bottom: -2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.2rem;
+    }
+    .bottleWrapper {
+        transform: scale(0.75);
+        transform-origin: top center;
+        margin-bottom: -8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.8rem;
+    }
+    .bottleWrapper {
+        /* transform: scale(0.6); */
+        margin-bottom: -8rem;
+    }
+}

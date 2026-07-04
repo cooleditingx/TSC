@@ -1,0 +1,263 @@
+.samplescon {
+  padding: 1rem;
+  background-color: var(--bg-color);
+  text-align: center;
+}
+
+.sampleheader {
+  text-align: center;
+  font-family: tsc;
+  font-size: 3rem;
+  /* height: 55px; */
+  margin: 0;
+  padding: 0;
+  /* margin-bottom: 1.5rem; */
+  color: var(--accent-color);
+  /* overflow: hidden; */
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.filterBtn {
+  background: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 24px;
+  color: var(--primary-color);
+  font-family: var(--text);
+  font-size: 1rem;
+  padding: 0.45rem 1.4rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.filterBtnActive {
+  background-color: var(--secondary-color-light);
+  color: #fff;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.addToCartContainer {
+  margin-top: 2rem;
+}
+
+.addToCartBtn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-family: var(--text);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 2.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background-color: var(--secondary-color-light);
+}
+
+.addToCartBtn:disabled {
+  background-color: var(--secondary-color-light);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card {
+  position: relative;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 28px;
+  width: 15rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--secondary-color-trans);
+  transition: border 0.25s ease;
+}
+
+.card:hover .deleteBtn {
+  opacity: 1;
+}
+
+.cardSelected {
+  border: 2px solid var(--primary-color);
+  background-color: var(--secondary-color-light);
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  opacity: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  padding: 0.3rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd0cf;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.deleteBtn:hover {
+    color: var(--accent-color);
+}
+
+.selectedContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottleImg {
+  max-height: 75%;
+  max-width: 75%;
+  object-fit: contain;
+  display: block;
+}
+
+.selectedName {
+  margin-top: 0.75rem;
+  font-family: var(--text);
+  font-size: 1.1rem;
+  color: var(--neutral-color);
+  font-style: italic;
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--secondary-color-light);
+  border: 1px solid var(--secondary-color);
+  border-radius: 24px;
+  color: var(--neutral-color);
+  font-family: var(--text);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.selectBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--neutral-color);
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--secondary-color);
+  border: 1px solid var(--neutral-color);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownItem {
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  font-family: var(--text);
+  font-size: 1rem;
+  color: var(--neutral-color);
+  text-align: left;
+  transition: background 0.15s ease;
+  border-radius: 8px;
+}
+
+.dropdownItem:hover {
+  background-color: var(--secondary-color-light);
+}
+
+@media (max-width: 768px) {
+    .samplescon {
+        padding: 1rem 0.75rem;
+    }
+    .sampleheader {
+        font-size: 2rem;
+    }
+    .filterGroup {
+        flex-wrap: wrap;
+    }
+    .cardsContainer {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .card {
+        width: 12rem;
+        height: 13rem;
+    }
+    .selectBtn {
+      font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 10rem;
+        height: 11rem;
+    }
+    .filterBtn {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+    .cardsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .selectBtn {
+      font-size: 0.6rem;
+    }
+}

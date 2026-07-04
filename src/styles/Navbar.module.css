@@ -1,0 +1,290 @@
+@font-face {
+    font-family: tsc;
+    src: url("../assets/Eyesome-Font/Eyesome\ Script.otf");
+}
+
+.navbarcon {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: relative;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.searchbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navright {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}
+select {
+    appearance: base-select;
+    border: none;
+    padding: 1rem;
+    margin: 0 3rem;
+    width: max-content;
+    align-content: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+select:hover {
+    background-color: transparent;
+}
+select::picker(select) {
+    appearance: base-select;
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 8px;
+}
+select:focus {
+    border: none;
+    outline: 0px solid transparent;
+}
+select::picker-icon {
+    font-size: 1rem;
+    transition: 200ms ease-out;
+}
+select:open::picker-icon {
+    rotate: 180deg;
+}
+select option {
+    padding: 0.5rem;
+}
+select option:checked {
+    background-color: var(--accent-color);
+}
+select option::checkmark {
+    content: "";
+}
+.logo{
+    color: var(--primary-color);
+    font-family: tsc;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-top: 0.7rem;
+    text-decoration: none;
+}
+.searchicon {
+    padding: 0 0.5rem;
+}
+.searchicon:hover {
+    scale: 1.1;
+}
+.search {
+    padding-right: 5rem ;
+    font-size: 1.2rem;
+}
+.cart {
+    padding: 1.5rem;
+}
+.cartBtn {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+}
+.cartBadge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    min-width: 1.1rem;
+    height: 1.1rem;
+    padding: 0 0.25rem;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navmenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 0.05rem;
+    padding: 0.5rem;
+    align-items: center;
+    text-align: center;
+}
+ul {
+    margin: 0 0.5rem;
+}
+ul a li {
+    list-style: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-family: var(--text);
+    height: max-content;
+    font-weight: 400;
+    animation: fade-in-fwd 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+ul a {
+    text-decoration: none;
+}
+ul li:hover {
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: all;
+}
+.langcon {
+    padding: 1rem;
+    flex: 1;
+}
+.lang {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+.langActive {
+    color: var(--accent-color);
+}
+
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 0.25rem;
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+.hamburger:hover {
+    color: var(--accent-color);
+}
+
+/* Mobile slide-down menu — hidden by default */
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.mobileMenuOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.mobileLang {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.mobileLangLabel {
+    font-family: var(--text);
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    opacity: 0.45;
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+}
+.mobileNav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: var(--text);
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0.85rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: color 0.18s ease, padding-left 0.18s ease;
+    letter-spacing: 0.01em;
+}
+.mobileNav a:last-child {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+.mobileNav a:hover,
+.mobileNav a:active {
+    color: var(--accent-color);
+    padding-left: 2rem;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+    .logo {
+        font-size: 1.8rem;
+        margin-top: 0.4rem;
+    }
+    .search {
+        display: none;
+    }
+    .searchicon {
+        width: 20px;
+        height: 20px;
+    }
+    .cart {
+        width: 26px;
+        height: 26px;
+        padding: 0.75rem;
+    }
+    select {
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+    }
+    /* Hide desktop lang selector and nav menu on mobile */
+    .langcon {
+        display: none;
+    }
+    .navmenu {
+        display: none;
+    }
+    /* Show hamburger — give it flex:1 to mirror langcon so logo stays centered */
+    .hamburger {
+        display: flex;
+        flex: 1;
+    }
+    /* Show mobile menu container */
+    .mobileMenu {
+        display: flex;
+    }
+}

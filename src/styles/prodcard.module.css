@@ -1,0 +1,172 @@
+.cardcon {
+    /* background-color: var(--bg-color); */
+    border: 2px solid var(--neutral-color);
+    padding: 1rem 0.5rem;
+    margin: auto;
+    text-align: center;
+    width: 25rem;
+    /* height: 30rem; */
+
+}
+.imgcon {
+    width: 95%;
+    height: 20rem;
+    margin: auto;
+    /* padding: 0%; */
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.prodheadcon, .prodcta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    font-family: var(--text);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.prodheadcon h4, .prodhead {
+    font-weight: 200;
+    font-style: italic;
+    color: var(--accent-color);
+    margin: 0;
+}
+.prodinfocon {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.cardcon:hover .prodinfocon {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.selectbox {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 40px;
+    color: var(--neutral-color);
+}
+
+.selectboxCombo {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--accent-color);
+    user-select: none;
+}
+
+.selectboxList {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    /* min-width: 100%; */
+    background: white;
+    border: 1px solid var(--accent-color);
+    z-index: 10;
+}
+
+.selectboxOption {
+    padding: 0.35rem 0.7rem;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.selectboxOption:hover {
+    background-color: var(--accent-color);
+    color: var(--neutral-color);
+}
+
+.selectboxOptionActive {
+    font-weight: 700;
+}
+
+.proddes {
+    text-align: start;
+    padding: 0 1rem;
+    margin: 0;
+    color: var(--neutral-color);
+    font-family: var(--text);
+    cursor: pointer;
+}
+.cartbtn {
+    /* visibility: hidden; */
+    display: none;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--accent-color);
+  overflow: hidden;
+  padding: 0;
+}
+
+.cartbtn, .btnicon, .btntext {
+  transition: all 0.3s;
+}
+
+.cartbtn .btntext {
+  transform: translateX(30px);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.cartbtn .btnicon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 41px;
+  background-color: #e0c055;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartbtn .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.cartbtn{
+  background: var(--accent-color);
+}
+
+.cartbtn:focus .btntext {
+  color: transparent;
+}
+
+.cartbtn:focus .btnicon {
+  width: 150px;
+  transform: translateX(0);
+}
+.cartbtn:hover .btnicon {
+  background-color: #ffda62;
+}
+
+@media (max-width: 800px) {
+    .cardcon {
+        width: 22rem;
+    }
+    .imgcon {
+        height: 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardcon {
+        width: 18rem;
+    }
+    .imgcon {
+        height: 14rem;
+    }
+}

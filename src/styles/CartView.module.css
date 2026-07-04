@@ -1,0 +1,309 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.45);
+    z-index: 999;
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 35rem;
+    background: var(--neutral-color);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 1000;
+}
+
+.drawerOpen {
+    transform: translateX(0);
+}
+
+.stage {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.panel {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(0);
+    transition: transform 0.35s ease;
+    background: var(--neutral-color);
+}
+
+.panelShiftedLeft {
+    transform: translateX(-100%);
+}
+
+.samplesPanel {
+    transform: translateX(100%);
+}
+
+.panelIn {
+    transform: translateX(0);
+}
+
+/* ---- Header ---- */
+
+.header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.headerTitle {
+    font-family: var(--text);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- Body / line items ---- */
+
+.body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.emptyState {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: var(--text);
+}
+
+.lineItem {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid var(--bg-color);
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.lineItemImgWrap {
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+.lineItemImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.lineItemInfo {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.lineItemName {
+    font-family: var(--text);
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin: 0;
+    padding-right: 1.75rem;
+}
+
+.lineItemSize {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    margin: 0.15rem 0 0;
+}
+
+.lineItemSub {
+    font-size: 0.8rem;
+    color: var(--secondary-color-light);
+    margin: 0.15rem 0 0;
+}
+
+.lineItemBottomRow {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.qtyControl {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid var(--secondary-color-light);
+    padding: 0.15rem 0.6rem;
+}
+
+.qtyBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--primary-color);
+    width: 1.2rem;
+}
+
+.qtyValue {
+    min-width: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+
+.lineItemPrice {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.removeBtn {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* ---- Free samples teaser ---- */
+
+.samplesTeaser {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+}
+
+.samplesBoxRow {
+    flex-shrink: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.samplesPlusBox {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    border: 1px dashed var(--secondary-color);
+    background: var(--neutral-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.sampleFilledBox {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+.sampleFilledImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.samplesTeaserText {
+    font-family: var(--text);
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+    flex-shrink: 0;
+    padding: 1.25rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--bg-color);
+    background: var(--neutral-color);
+}
+
+.bagTotalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bagTotalLabel {
+    font-family: var(--text);
+    font-size: 1.05rem;
+    color: var(--primary-color);
+}
+
+.bagTotalValue {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.checkoutBtn {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+    font-family: var(--text);
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkoutBtn:hover {
+    background-color: var(--secondary-color-light);
+}
+
+@media (max-width: 480px) {
+    .drawer {
+        max-width: 100%;
+    }
+}
