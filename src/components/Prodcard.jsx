@@ -20,7 +20,7 @@ function Prodcard() {
         <Link to="/product" style={{textDecoration: "none", color: "inherit"}}>
             <div className={styles.cardcon}>
                 <div className={styles.imgcon}>
-                    <img className={styles.img} src="../src/assets/placeholder.jpg" alt="product" />
+                    <img className={styles.img} src="../assets/placeholder.jpg" alt="product" />
                 </div>
                 <div className={styles.proddescon}>
                     <div className={styles.prodheadcon}>

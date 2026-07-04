@@ -29,10 +29,10 @@ function ProductPage() {
     const navigate = useNavigate()
     const { addToCart } = useCart()
     const thumbnails = [
-        "../src/assets/placeholder.jpg",
-        "../src/assets/placeholder.jpg",
-        "../src/assets/placeholder.jpg",
-        "../src/assets/placeholder.jpg",
+        "../assets/placeholder.jpg",
+        "../assets/placeholder.jpg",
+        "../assets/placeholder.jpg",
+        "../assets/placeholder.jpg",
     ]
 
     return (
