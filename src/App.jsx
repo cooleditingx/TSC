@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
-import Hero from './components/hero.jsx'
+import Hero from './components/Hero.jsx'
 import styles from "../src/styles/App.module.css"
 import Bestsellers from './components/Bestsellers.jsx'
 import Menperfumes from './components/Menperfumes.jsx'
