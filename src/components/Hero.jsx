@@ -5,7 +5,7 @@ function Hero (){
         <>
         <div className={styles.imgcon}>
             <div className={styles.imgwrapper}>
-                <img className={styles.heroimg} src="../assets/hero.png" alt="hero img" />
+                <img className={styles.heroimg} src={"../assets/hero.png"} alt="hero img" />
             </div>
         </div>
         </>
