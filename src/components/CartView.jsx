@@ -1,6 +1,7 @@
 import styles from "../styles/CartView.module.css"
 import { useCart } from "../context/CartContext.jsx"
 import SamplesScreen from "./SamplesScreen.jsx"
+import sampleimg from "../assets/sample.png"
 
 function LineItem({ item }) {
     const { removeFromCart, updateQty } = useCart()
@@ -101,7 +102,7 @@ function CartView() {
                                                 className={styles.sampleFilledBox}
                                                 onClick={openSamplesScreen}
                                             >
-                                                <img src="src/assets/sample.png" alt={sample.name} className={styles.sampleFilledImg} />
+                                                <img src={sampleimg} alt={sample.name} className={styles.sampleFilledImg} />
                                             </div>
                                         ) : (
                                             <div key={i} className={styles.samplesPlusBox} onClick={openSamplesScreen}>
