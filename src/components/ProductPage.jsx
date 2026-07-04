@@ -8,6 +8,7 @@ const sizes = ["100ml", "50ml"]
 import topnote from "../assets/Amber_765807d4-c6af-46b2-a8b0-8798ddbb7d44.png"
 import heartnote from "../assets/Patchouli_4b467e10-d67c-4e29-8f43-baa0f20012bd.png"
 import basenote from "../assets/lemon.png"
+import placeholder from "../assets/placeholder.jpg"
 
 
 function StarRating({ rating = 4 }) {
@@ -33,10 +34,11 @@ function ProductPage() {
     const navigate = useNavigate()
     const { addToCart } = useCart()
     const thumbnails = [
-        "/assets/placeholder.jpg",
-        "/assets/placeholder.jpg",
-        "/assets/placeholder.jpg",
-        "/assets/placeholder.jpg",
+        {placeholder},
+        {placeholder},
+        {placeholder},
+        {placeholder},
+        {placeholder}
     ]
 
     return (
