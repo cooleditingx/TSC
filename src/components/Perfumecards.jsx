@@ -35,7 +35,7 @@ function Perfumescards(props){
                                 price: 100,
                                 size,
                                 qty: 1,
-                                image: {placeholderimg},
+                                image: placeholderimg,
                                 subheading: "The Scent Chemist — Signature Series",
                             })
                         }}>

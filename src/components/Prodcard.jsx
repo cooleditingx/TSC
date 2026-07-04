@@ -65,7 +65,7 @@ function Prodcard() {
                                     price: 100,
                                     size: selected,
                                     qty: 1,
-                                    image: {placeholderimg},
+                                    image: placeholderimg,
                                     subheading: "The Scent Chemist — Signature Series",
                                 })
                             }}>

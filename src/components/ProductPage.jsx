@@ -34,11 +34,11 @@ function ProductPage() {
     const navigate = useNavigate()
     const { addToCart } = useCart()
     const thumbnails = [
-        {placeholder},
-        {placeholder},
-        {placeholder},
-        {placeholder},
-        {placeholder}
+        placeholder,
+        placeholder,
+        placeholder,
+        placeholder,
+        placeholder
     ]
 
     return (
