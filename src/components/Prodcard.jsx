@@ -20,7 +20,7 @@ function Prodcard() {
         <Link to="/product" style={{textDecoration: "none", color: "inherit"}}>
             <div className={styles.cardcon}>
                 <div className={styles.imgcon}>
-                    <img className={styles.img} src="../assets/placeholder.jpg" alt="product" />
+                    <img className={styles.img} src="/assets/placeholder.jpg" alt="product" />
                 </div>
                 <div className={styles.proddescon}>
                     <div className={styles.prodheadcon}>
@@ -64,7 +64,7 @@ function Prodcard() {
                                     price: 100,
                                     size: selected,
                                     qty: 1,
-                                    image: "../src/assets/placeholder.jpg",
+                                    image: "/assets/placeholder.jpg",
                                     subheading: "The Scent Chemist — Signature Series",
                                 })
                             }}>

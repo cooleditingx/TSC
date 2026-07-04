@@ -29,10 +29,10 @@ function ProductPage() {
     const navigate = useNavigate()
     const { addToCart } = useCart()
     const thumbnails = [
-        "../assets/placeholder.jpg",
-        "../assets/placeholder.jpg",
-        "../assets/placeholder.jpg",
-        "../assets/placeholder.jpg",
+        "/assets/placeholder.jpg",
+        "/assets/placeholder.jpg",
+        "/assets/placeholder.jpg",
+        "/assets/placeholder.jpg",
     ]
 
     return (
@@ -143,7 +143,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="src/assets/lemon.png" alt="top-notes" width={"100px"} height={"100px"}/>
+                                <img src="/assets/lemon.png" alt="top-notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Top Notes</h3>
                             <ul className={styles.noteList}>
@@ -155,7 +155,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="src/assets/Patchouli_4b467e10-d67c-4e29-8f43-baa0f20012bd.png" alt="Heart Notes" width={"100px"} height={"100px"}/>
+                                <img src="/assets/Patchouli_4b467e10-d67c-4e29-8f43-baa0f20012bd.png" alt="Heart Notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Heart Notes</h3>
                             <ul className={styles.noteList}>
@@ -167,7 +167,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="src/assets/Amber_765807d4-c6af-46b2-a8b0-8798ddbb7d44.png" alt="Base Notes" width={"100px"} height={"100px"}/>
+                                <img src="/assets/Amber_765807d4-c6af-46b2-a8b0-8798ddbb7d44.png" alt="Base Notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Base Notes</h3>
                             <ul className={styles.noteList}>
