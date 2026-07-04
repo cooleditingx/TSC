@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import styles from "../styles/perfumecards.module.css"
 import { useCart } from "../context/CartContext.jsx"
+import placeholderimg from "../assets/placeholder.jpg"
 function Perfumescards(props){
     const [size, setSize] = useState("50ml")
     const { addToCart } = useCart()
@@ -9,7 +10,7 @@ function Perfumescards(props){
         <Link to="/product" style={{textDecoration: "none", color: props.color, all: "none"}}>
             <div className={styles.cardcon} style={{backgroundColor: props.bgcolor}}>
                 <div className={styles.imgcon}>
-                    <img className={styles.img} src="/assets/placeholder.jpg" alt="product" />
+                    <img className={styles.img} src={placeholderimg} alt="product" />
                 </div>
                 <div className={styles.prodhead}>
                     <h3 className={styles.prodhead} style={{color: props.color}}>Adventure</h3>
@@ -34,7 +35,7 @@ function Perfumescards(props){
                                 price: 100,
                                 size,
                                 qty: 1,
-                                image: "/assets/placeholder.jpg",
+                                image: {placeholderimg},
                                 subheading: "The Scent Chemist — Signature Series",
                             })
                         }}>

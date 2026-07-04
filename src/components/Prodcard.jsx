@@ -2,6 +2,7 @@ import { useState, useRef } from "react"
 import { Link } from "react-router-dom"
 import styles from "../styles/prodcard.module.css"
 import { useCart } from "../context/CartContext.jsx"
+import placeholderimg from "../assets/placeholder.jpg"
 
 const options = ["100ml", "50ml"]
 
@@ -20,7 +21,7 @@ function Prodcard() {
         <Link to="/product" style={{textDecoration: "none", color: "inherit"}}>
             <div className={styles.cardcon}>
                 <div className={styles.imgcon}>
-                    <img className={styles.img} src="/assets/placeholder.jpg" alt="product" />
+                    <img className={styles.img} src={placeholderimg} alt="product" />
                 </div>
                 <div className={styles.proddescon}>
                     <div className={styles.prodheadcon}>
@@ -64,7 +65,7 @@ function Prodcard() {
                                     price: 100,
                                     size: selected,
                                     qty: 1,
-                                    image: "/assets/placeholder.jpg",
+                                    image: {placeholderimg},
                                     subheading: "The Scent Chemist — Signature Series",
                                 })
                             }}>

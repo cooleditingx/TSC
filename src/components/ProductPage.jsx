@@ -5,6 +5,10 @@ import styles from "../styles/ProductPage.module.css"
 import { Navigate, useNavigate } from "react-router-dom"
 import { useCart } from "../context/CartContext.jsx"
 const sizes = ["100ml", "50ml"]
+import topnote from "../assets/Amber_765807d4-c6af-46b2-a8b0-8798ddbb7d44.png"
+import heartnote from "../assets/Patchouli_4b467e10-d67c-4e29-8f43-baa0f20012bd.png"
+import basenote from "../assets/lemon.png"
+
 
 function StarRating({ rating = 4 }) {
     return (
@@ -143,7 +147,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="/assets/lemon.png" alt="top-notes" width={"100px"} height={"100px"}/>
+                                <img src={basenote} alt="top-notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Top Notes</h3>
                             <ul className={styles.noteList}>
@@ -155,7 +159,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="/assets/Patchouli_4b467e10-d67c-4e29-8f43-baa0f20012bd.png" alt="Heart Notes" width={"100px"} height={"100px"}/>
+                                <img src={heartnote} alt="Heart Notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Heart Notes</h3>
                             <ul className={styles.noteList}>
@@ -167,7 +171,7 @@ function ProductPage() {
 
                         <div className={styles.noteCol}>
                             <div className={styles.noteIcon}>
-                                <img src="/assets/Amber_765807d4-c6af-46b2-a8b0-8798ddbb7d44.png" alt="Base Notes" width={"100px"} height={"100px"}/>
+                                <img src={topnote} alt="Base Notes" width={"100px"} height={"100px"}/>
                             </div>
                             <h3 className={styles.noteTitle}>Base Notes</h3>
                             <ul className={styles.noteList}>
